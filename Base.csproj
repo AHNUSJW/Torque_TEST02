@@ -1,0 +1,349 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FA8A8AD5-F05B-4950-A96D-ACF069110720}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Base</RootNamespace>
+    <AssemblyName>Base</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoScaleHelper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\AutoScaleHelper.1.0.6\lib\net40\AutoScaleHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="HZH_Controls, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>packages\HZH_Controls.1.0.14\lib\net40\HZH_Controls.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="MySql.Data, Version=8.0.21.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\DbHelp\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.9\lib\net461\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.9\lib\net461\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UI\AiTorqueShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\AiTorqueShow.Designer.cs">
+      <DependentUpon>AiTorqueShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\XHShow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\XHShow.Designer.cs">
+      <DependentUpon>XHShow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Main.Designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\MenuDevices\MenuCalForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuDevices\MenuCalForm.designer.cs">
+      <DependentUpon>MenuCalForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuDevices\MenuConfigForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuDevices\MenuConfigForm.Designer.cs">
+      <DependentUpon>MenuConfigForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuDevices\MenuConnectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuDevices\MenuConnectForm.designer.cs">
+      <DependentUpon>MenuConnectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuDevices\MenuDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuDevices\MenuDataForm.Designer.cs">
+      <DependentUpon>MenuDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuHelps\MenuAboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuHelps\MenuAboutBox.Designer.cs">
+      <DependentUpon>MenuAboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuTools\MenuDealDataForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuTools\MenuDealDataForm.Designer.cs">
+      <DependentUpon>MenuDealDataForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuTools\MenuDealWorkOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuTools\MenuDealWorkOrderForm.designer.cs">
+      <DependentUpon>MenuDealWorkOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuTools\MenuExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuTools\MenuExportForm.Designer.cs">
+      <DependentUpon>MenuExportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuTools\MenuImportWorkOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuTools\MenuImportWorkOrderForm.designer.cs">
+      <DependentUpon>MenuImportWorkOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuTools\MenuSearchWorkOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuTools\MenuSearchWorkOrderForm.Designer.cs">
+      <DependentUpon>MenuSearchWorkOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuTools\MenuSetReceiverForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuTools\MenuSetReceiverForm.Designer.cs">
+      <DependentUpon>MenuSetReceiverForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuTools\MenuSetWorkOrderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuTools\MenuSetWorkOrderForm.designer.cs">
+      <DependentUpon>MenuSetWorkOrderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuTools\MenuShowStrategyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuTools\MenuShowStrategyForm.designer.cs">
+      <DependentUpon>MenuShowStrategyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MenuUsers\MenuAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MenuUsers\MenuAccountForm.Designer.cs">
+      <DependentUpon>MenuAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MyControl\ButtonX.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UI\AiTorqueShow.en.resx">
+      <DependentUpon>AiTorqueShow.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\AiTorqueShow.resx">
+      <DependentUpon>AiTorqueShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\XHShow.en.resx">
+      <DependentUpon>XHShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\XHShow.resx">
+      <DependentUpon>XHShow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Main.en.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Main.resx">
+      <DependentUpon>Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuDevices\MenuCalForm.en.resx">
+      <DependentUpon>MenuCalForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuDevices\MenuCalForm.resx">
+      <DependentUpon>MenuCalForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuDevices\MenuConfigForm.en.resx">
+      <DependentUpon>MenuConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuDevices\MenuConfigForm.resx">
+      <DependentUpon>MenuConfigForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuDevices\MenuConnectForm.en.resx">
+      <DependentUpon>MenuConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuDevices\MenuConnectForm.resx">
+      <DependentUpon>MenuConnectForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuDevices\MenuConnectForm.zh.resx">
+      <DependentUpon>MenuConnectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuDevices\MenuDataForm.en.resx">
+      <DependentUpon>MenuDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuDevices\MenuDataForm.resx">
+      <DependentUpon>MenuDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuHelps\MenuAboutBox.resx">
+      <DependentUpon>MenuAboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuTools\MenuDealDataForm.en.resx">
+      <DependentUpon>MenuDealDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuTools\MenuDealDataForm.resx">
+      <DependentUpon>MenuDealDataForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuTools\MenuDealWorkOrderForm.en.resx">
+      <DependentUpon>MenuDealWorkOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuTools\MenuDealWorkOrderForm.resx">
+      <DependentUpon>MenuDealWorkOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuTools\MenuExportForm.resx">
+      <DependentUpon>MenuExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuTools\MenuImportWorkOrderForm.en.resx">
+      <DependentUpon>MenuImportWorkOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuTools\MenuImportWorkOrderForm.resx">
+      <DependentUpon>MenuImportWorkOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuTools\MenuSearchWorkOrderForm.en.resx">
+      <DependentUpon>MenuSearchWorkOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuTools\MenuSearchWorkOrderForm.resx">
+      <DependentUpon>MenuSearchWorkOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuTools\MenuSetReceiverForm.en.resx">
+      <DependentUpon>MenuSetReceiverForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuTools\MenuSetReceiverForm.resx">
+      <DependentUpon>MenuSetReceiverForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuTools\MenuSetWorkOrderForm.en.resx">
+      <DependentUpon>MenuSetWorkOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuTools\MenuSetWorkOrderForm.resx">
+      <DependentUpon>MenuSetWorkOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuTools\MenuShowStrategyForm.en.resx">
+      <DependentUpon>MenuShowStrategyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuTools\MenuShowStrategyForm.resx">
+      <DependentUpon>MenuShowStrategyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuUsers\MenuAccountForm.en.resx">
+      <DependentUpon>MenuAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MenuUsers\MenuAccountForm.resx">
+      <DependentUpon>MenuAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\BIL\BIL.csproj">
+      <Project>{7175f0d8-53b1-454d-9c74-db279d5cc9d3}</Project>
+      <Name>BIL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Library\Library.csproj">
+      <Project>{5edd2e00-ca50-441c-81e5-8add35d20143}</Project>
+      <Name>Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{a43ac5c5-45b6-404a-88df-250364db4f05}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="aitorque.ico" />
+    <None Include="Resource\Bat_3.png" />
+    <None Include="Resource\Bat_2.png" />
+    <None Include="Resource\Bat_1.png" />
+    <None Include="Resource\Bat_0.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
